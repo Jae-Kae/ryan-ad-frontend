@@ -2,15 +2,17 @@ import React from 'react'
 // assets
 import logo from '../../assets/3dgifmaker18317.gif'
 import house1 from '../../assets/ja sfx 8.JPEG'
+import ryanADLogo from '../../assets/ryan-ad-logo.PNG'
 
 const Home = () => {
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1>
-          R Y A N <span className='sup'>&reg;</span> A D
-        </h1>
-        <img src={house1} className='App-logo' alt='logo' />
+        <img src={ryanADLogo} alt='logo' />
+
+        <br />
+        <img src={house1} alt='logo' />
+
         <a
           className='App-link'
           href='https://.org'
