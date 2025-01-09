@@ -1,10 +1,28 @@
-import React, { useState, useEffect } from 'react'
-const [articles, setArticles] = useState([])
+import { useEffect, useState } from 'react'
 
-useEffect(() => {
-  fetch('http://localhost:1337/articles')
-    .then((response) => response.json())
-    .then((data) => setArticles(data))
-}, [])
+const useFetch = (url) => {
+  const [data, setData] = useState(null)
+  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState(true)
 
-console.log('FETCH..:', articles)
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true)
+      try {
+        const res = await fetch(url)
+        const json = await res.json()
+        setData(json)
+        setLoading(false)
+      } catch (error) {
+        setError(error)
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [url])
+
+  return { loading, error, data }
+}
+
+export default useFetch
