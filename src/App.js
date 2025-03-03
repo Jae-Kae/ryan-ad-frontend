@@ -1,17 +1,26 @@
-import logo from './logo.svg'
-import './App.css'
-import Home from './pages/Home'
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from './pages/home/Home.js'
+import './styles/global.css'
 import useFetch from './hooks/fetchData'
 
-function App() {
+const App = () => {
   const { loading, error, data } = useFetch(
     'http://localhost:1337/api/landing-page'
   )
   if (loading) return <p>Loading...</p>
   if (error) return console.log('ERROR:', error)
-  console.log('Data:', data.data)
+  console.log('Data from App.js:', data.data)
 
-  return <Home />
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </Router>
+    </>
+  )
 }
 
 export default App

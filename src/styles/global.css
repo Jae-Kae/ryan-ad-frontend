@@ -1,3 +1,10 @@
+/* fonts */
+@font-face {
+  font-family: 'EurostileBold'; /*Can be any text*/
+  src: local('EurostileBold'),
+    url('../fonts/Eurostile Bold.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   font-family: EurostileBold, -apple-system, BlinkMacSystemFont, 'Segoe UI',

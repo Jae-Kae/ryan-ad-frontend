@@ -1,3 +1,7 @@
+h1 {
+  color: black;
+}
+
 .App {
   text-align: center;
 }
@@ -5,19 +9,6 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-/* fonts */
-@font-face {
-  font-family: 'EurostileBold'; /*Can be any text*/
-  src: local('EurostileBold'),
-    url('./fonts/Eurostile Bold.ttf') format('truetype');
 }
 
 .sup {
@@ -46,5 +37,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }

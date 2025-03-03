@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/home.css'
 // assets
 import logo from '../../assets/3dgifmaker18317.gif'
 import house1 from '../../assets/ja sfx 8.JPEG'
